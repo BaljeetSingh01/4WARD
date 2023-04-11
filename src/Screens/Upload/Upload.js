@@ -16,12 +16,12 @@ export const Upload = ({ navigation }) => {
   return (
     <View style={styles.container}>
       <View style={styles.upperview}>
-        <View style={styles.editprofileview}>
+        <View style={styles.addinfoview}>
           <TouchableOpacity
             onPress={() => {
               navigation.goBack();
             }}
-            style={styles.backarrowview}
+            style={styles.backarrow}
           >
             <Image source={imagePath.ic_back_arrow} />
           </TouchableOpacity>

@@ -8,6 +8,7 @@ import { FlatList } from "react-native";
 import { styles } from "./Homestyle";
 import Strings from "../../Constants/Strings";
 import NavigationStrings from "../../Constants/NavigationStrings";
+import { StatusBar } from "expo-status-bar";
 export const Home = ({ navigation }) => {
   carddata = [
     {
@@ -43,6 +44,7 @@ export const Home = ({ navigation }) => {
   ];
   return (
     <View style={styles.container}>
+      <StatusBar style="auto" />
       <View style={styles.mainview}>
         <View style={styles.headerview}>
           <Image source={imagePath.forwardicon} />

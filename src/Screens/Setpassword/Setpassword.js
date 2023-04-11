@@ -18,21 +18,19 @@ import NavigationStrings from "../../Constants/NavigationStrings";
 import Strings from "../../Constants/Strings";
 import { styles } from "./Setpasswordstyle";
 export const Setpassword = ({ navigation }) => {
-  const[password,setpassword]=useState('')
-  const[confirmpassword,setconfirmpassword]=useState('')
+  const [password, setpassword] = useState('')
+  const [confirmpassword, setconfirmpassword] = useState('')
 
-  function pass(val){
-    setpassword(val)
-  }
-  function confirmpass(val){
+
+  function confirmpass(val) {
     setconfirmpassword(val)
   }
- 
-  function getstarted(){
-    if(password=='' || confirmpassword==''){
+
+  function getstarted() {
+    if (password == '' || confirmpassword == '' || password != confirmpassword) {
       alert('Please fill password properly')
     }
-    else{
+    else {
       navigation.navigate(NavigationStrings.selectlocation)
     }
   }
@@ -59,12 +57,12 @@ export const Setpassword = ({ navigation }) => {
           </Text>
         </View>
         <View style={styles.bothinputview}>
-          <Inputfield placeholder={Strings.password} value={password} ontextinput={pass}/>
-          <Inputfield placeholder={Strings.confirm_password} value={confirmpassword}  ontextinput={confirmpass}/>
+          <Inputfield placeholder={Strings.password} value={password} ontextinput={(val) => { setpassword(val) }} />
+          <Inputfield placeholder={Strings.confirm_password} value={confirmpassword} ontextinput={confirmpass} />
         </View>
       </View>
       <TouchableOpacity
-        onPress={() => {getstarted() }}
+        onPress={() => { getstarted() }}
         style={styles.lastbtnview}
       >
         <RedButton title={Strings.get_started} />

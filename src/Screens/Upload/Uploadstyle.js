@@ -11,8 +11,8 @@ export const styles = StyleSheet.create({
     paddingHorizontal: moderateScale(24),
   },
   upperview: { flex: 0.9 },
-
-  editprofileview: {
+  backarrow:{width:moderateScale(22),height:moderateVerticalScale(16)},
+  addinfoview: {
     flexDirection: "row",
     marginTop: moderateVerticalScale(56),
     alignItems: "center",

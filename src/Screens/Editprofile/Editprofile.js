@@ -52,7 +52,9 @@ export const Editprofile = ({ navigation }) => {
           <Text style={styles.txt}>{Strings.editprofile}</Text>
         </View>
         <View style={styles.imgview}>
-          <Image source={imagePath.editprofile} style={styles.img} />
+          <Image source={imagePath.editprofile} style={styles.img} 
+          
+          />
         </View>
 
         <View style={styles.twoinputfieldview}>

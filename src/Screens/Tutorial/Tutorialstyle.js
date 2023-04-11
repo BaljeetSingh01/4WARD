@@ -6,8 +6,8 @@ import {
 
 export const styles = StyleSheet.create({
   container: {
+    marginTop: moderateVerticalScale(57),
     flex: 1,
-    backgroundColor: "#2E2E2E",
     paddingLeft: moderateVerticalScale(15),
   },
   getstarted: {

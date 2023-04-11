@@ -15,6 +15,7 @@ import {
 const Tab = createBottomTabNavigator();
 export default function Bottomtabs() {
   return (
+   
     <Tab.Navigator
       screenOptions={{
         headerShown: false,
@@ -121,5 +122,6 @@ export default function Bottomtabs() {
         }}
       />
     </Tab.Navigator>
+    
   );
 }

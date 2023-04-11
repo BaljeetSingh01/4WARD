@@ -17,30 +17,35 @@ import imagePath from "../../Constants/imagePath";
 import Strings from "../../Constants/Strings";
 import { styles } from "./PhoneLoginstyle";
 import AsyncStorage from "@react-native-async-storage/async-storage"
+import { statuscheck } from "../../Redux/actions/actionlogin";
+import WrapperContainer from "../../Components/WrapperContainer";
+
+
 export const PhoneLogin = ({ navigation }) => {
   const [mobile, setmobile] = useState("");
   const [password, setpassword] = useState("");
-  const[passview,setpassview]=useState(true)
-  const[showtohide,settohide]=useState('Show')
+  const [securetextentry, settextentry] = useState(true)
+  const [showtohide, settohide] = useState('Show')
 
 
-  function show(){
-    if(passview==true){
-    setpassview(false)
-    settohide('Hide')
-  }
-    if(passview==false){
-     setpassview(true)
-     settohide('Show')
+  function show() {
+    if (securetextentry == true) {
+      settextentry(false)
+      settohide('Hide')
+    }
+    if (securetextentry == false) {
+      settextentry(true)
+      settohide('Show')
     }
   }
-  
- const saveTOAsyncstore= async ()=>{
-  let datatoStore={
-    userPhone: mobile,
-    userPassword: password
-  }
-  await AsyncStorage.setItem('userLoginData', JSON.stringify(datatoStore));
+
+
+  const saveTOAsyncstore = async () => {
+    let data = {
+      userPhone: mobile,
+      userPassword: password
+    }
+    await AsyncStorage.setItem('userLoginData', JSON.stringify(data))
   }
 
 
@@ -55,16 +60,19 @@ export const PhoneLogin = ({ navigation }) => {
   }
 
   function logincheck() {
-    if (!mobile || !password) {
+    if (mobile == '' || password == '') {
       alert("Please enter details properly");
     }
-    else{
+    else {
+
       saveTOAsyncstore()
+      statuscheck(true)
 
     }
   }
 
   return (
+
     <View style={styles.container}>
       <View style={styles.upperview}>
         <TouchableOpacity
@@ -94,24 +102,25 @@ export const PhoneLogin = ({ navigation }) => {
           </View>
         </View>
         <Inputfield
-        
+
           placeholder={Strings.password}
           ontextinput={passinput}
           myvalue={password}
           mylength={30}
-          
+
           Show={showtohide}
           onPress={show}
-          secureTextEntry={passview}
+          secureTextEntry={securetextentry}
         />
         <View style={styles.useotpview}>
           <Text style={styles.useotptxt}>{Strings.use_otp}</Text>
           <Text style={styles.forgottxt}>{Strings.forgot_password}</Text>
         </View>
       </View>
-      <TouchableOpacity onPress={() => {logincheck() }} style={styles.lastbtnview}>
+      <TouchableOpacity onPress={() => { logincheck() }} style={styles.lastbtnview}>
         <RedButton title={Strings.login} />
       </TouchableOpacity>
     </View>
+
   );
 };

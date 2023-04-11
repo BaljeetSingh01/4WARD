@@ -8,11 +8,13 @@ import { ProfileComp } from "../../Components/ProfileComp";
 import imagePath from "../../Constants/imagePath";
 import NavigationStrings from "../../Constants/NavigationStrings";
 import Strings from "../../Constants/Strings";
+import { statuscheck } from "../../Redux/actions/actionlogin";
 import { styles } from "./Profilestyle";
 
 export const Profile = ({ navigation }) => {
 
- async function Signout(){
+  async function Signout() {
+    statuscheck(false)
     await AsyncStorage.removeItem('userLoginData')
   }
 
@@ -26,7 +28,7 @@ export const Profile = ({ navigation }) => {
         <TouchableOpacity onPress={() => navigation.navigate(NavigationStrings.changepassword)}>
           <ProfileComp mytxt={Strings.changepass} myimg={imagePath.key} />
         </TouchableOpacity>
-        <TouchableOpacity onPress={()=>Signout()}>
+        <TouchableOpacity onPress={() => Signout()}>
           <ProfileComp mytxt={Strings.signout} myimg={imagePath.signout} />
         </TouchableOpacity>
       </View>

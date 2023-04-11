@@ -65,7 +65,7 @@ export const styles = StyleSheet.create({
     paddingVertical: moderateVerticalScale(8),
     paddingHorizontal: moderateScale(16),
     flexDirection: "row",
-    alignItems: "center",
+     alignItems: "center",
   },
   bottomtxt1: { color: "#FFFFFF", fontSize: 15 },
   bottomtxt2: {

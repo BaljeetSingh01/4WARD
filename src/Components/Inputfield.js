@@ -24,13 +24,13 @@ export const Inputfield = ({
   return (
     <View style={{ ...styles.cont, ...btnstyle }}>
       <TextInput
-      
+
         ref={myref}
         maxLength={mylength}
         value={myvalue}
         onChangeText={ontextinput}
         placeholder={placeholder}
-        style={{ flex: 1,fontWeight:'bold' ,fontSize:15,color:'#FFFFFF',marginLeft:5}}
+        style={styles.txtinput}
         placeholderTextColor=' "rgba(255,255,255,0.5)"'
         {...props}
       />
@@ -52,6 +52,7 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     padding: moderateScale(16),
     alignItems: "center",
-    
+
   },
+  txtinput: { flex: 1, fontWeight: 'bold', fontSize: 15, color: '#FFFFFF', marginLeft: 5 },
 });

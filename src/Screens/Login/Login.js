@@ -8,10 +8,12 @@ import imagePath from "../../Constants/imagePath";
 import NavigationStrings from "../../Constants/NavigationStrings";
 import Strings from "../../Constants/Strings";
 import { styles } from "./Loginstyle";
+import WrapperContainer from "../../Components/WrapperContainer";
 
 export const Login = ({ navigation }) => {
   return (
-    <View style={styles.container}>
+    <WrapperContainer containerStyle={{ backgroundColor: 'rgba(46,46,46,1)' }}>
+
       <View style={styles.main}>
         <Image source={imagePath.forward} style={styles.forwardimg} />
         <Text style={styles.text}>{Strings.By_clicking_log_in}</Text>
@@ -55,6 +57,7 @@ export const Login = ({ navigation }) => {
           <Text style={styles.signuptxt}>{Strings.sign_up}</Text>
         </TouchableOpacity>
       </View>
-    </View>
+
+    </WrapperContainer>
   );
 };
