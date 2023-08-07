@@ -12,8 +12,8 @@ export const styles = StyleSheet.create({
   },
   upperview: { flex: 0.8 },
   backarrowview: {
-    
-    width:moderateScale(20),
+
+    width: moderateScale(20),
     marginTop: moderateVerticalScale(56),
   },
   enterotp: {
@@ -32,7 +32,7 @@ export const styles = StyleSheet.create({
   secondinput: { flex: 0.13 },
   thirdinput: { flex: 0.13 },
   fourthinput: { flex: 0.13 },
-  inputbtnstyle: { padding: moderateScale(6) },
+  inputbtnstyle: { paddingHorizontal: moderateScale(5) },
 
   resendcodeview: { flex: 0.1, justifyContent: "center" },
   resendtxt: { color: "#FFFFFF" },

@@ -7,7 +7,7 @@ import imagePath from "../../Constants/imagePath";
 import { FlatList } from "react-native";
 import { styles } from "./Homestyle";
 import Strings from "../../Constants/Strings";
-import NavigationStrings from "../../Constants/NavigationStrings";
+import NavigationStrings from "../../Constants/navigationStrings";
 import { StatusBar } from "expo-status-bar";
 export const Home = ({ navigation }) => {
   carddata = [

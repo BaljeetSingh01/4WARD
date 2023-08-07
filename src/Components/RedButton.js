@@ -6,15 +6,15 @@ import {
 
 export const RedButton = ({ title, myimage, btnstyle, txtstyle }) => {
   return (
-    <View>
-      <View style={{ ...styles.btncontainer, ...btnstyle }}>
-        {!!myimage ? <Image source={myimage} style={styles.btnimage} /> : null}
+    // <View>
+    <View style={{ ...styles.btncontainer, ...btnstyle }}>
+      {!!myimage ? <Image source={myimage} style={styles.btnimage} /> : null}
 
-        <View style={{ flex: 1 }}>
-          <Text style={{ ...styles.btntext, ...txtstyle }}>{title}</Text>
-        </View>
+      <View style={{ flex: 1 }}>
+        <Text style={{ ...styles.btntext, ...txtstyle }}>{title}</Text>
       </View>
     </View>
+    // </View>
   );
 };
 

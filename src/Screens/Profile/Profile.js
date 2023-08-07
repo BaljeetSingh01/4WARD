@@ -6,7 +6,7 @@ import {
 } from "react-native-size-matters";
 import { ProfileComp } from "../../Components/ProfileComp";
 import imagePath from "../../Constants/imagePath";
-import NavigationStrings from "../../Constants/NavigationStrings";
+import NavigationStrings from "../../Constants/navigationStrings";
 import Strings from "../../Constants/Strings";
 import { statuscheck } from "../../Redux/actions/actionlogin";
 import { styles } from "./Profilestyle";

@@ -14,7 +14,7 @@ import {
 import { Inputfield } from "../../Components/Inputfield";
 import { RedButton } from "../../Components/RedButton";
 import imagePath from "../../Constants/imagePath";
-import NavigationStrings from "../../Constants/NavigationStrings";
+import NavigationStrings from "../../Constants/navigationStrings";
 import Strings from "../../Constants/Strings";
 import { styles } from "./CreateAccountstyle";
 
@@ -35,7 +35,7 @@ export const CreateAccount = ({ navigation }) => {
     }
   }
   function emailinput(val) {
-    
+
     setemail(val);
   }
   function mobileinput(val) {
@@ -45,8 +45,8 @@ export const CreateAccount = ({ navigation }) => {
   }
 
   function next() {
-     var emailcheck=   /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-    if (!firstname || !lastname  || !mobileno || !email.match(emailcheck)) {
+    var emailcheck = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    if (!firstname || !lastname || !mobileno || !email.match(emailcheck)) {
       alert("Please enter details properly");
     } else {
       navigation.navigate(NavigationStrings.otpscreen);

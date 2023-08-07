@@ -4,7 +4,7 @@ import { Provider } from "react-redux";
 import { Routes } from "./src/Navigations/Routes";
 import { statuscheck } from "./src/Redux/actions/actionlogin";
 import store from "./src/Redux/store";
-import { axiosget, axiospost, postApi } from "./src/utils/utils";
+import { axiosllget, axiospost, postApi } from "./src/utils/utils";
 import { Post_url, get_data } from "./src/config/url";
 import { useEffect } from "react";
 import Practise from "./src/Screens/practise";
@@ -34,7 +34,7 @@ export default function App() {
 
   async function datasave() {
     const val = await AsyncStorage.getItem(('userLoginData'))
-    console.log(val, 'in app.js')
+    console.log('in app.js', val)
     if (val) {
       statuscheck(true)
     }

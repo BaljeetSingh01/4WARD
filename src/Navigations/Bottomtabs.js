@@ -12,10 +12,11 @@ import {
   moderateScale,
   moderateVerticalScale,
 } from "react-native-size-matters";
+import NavigationStrings from "../Constants/navigationStrings";
 const Tab = createBottomTabNavigator();
 export default function Bottomtabs() {
   return (
-   
+
     <Tab.Navigator
       screenOptions={{
         headerShown: false,
@@ -31,7 +32,7 @@ export default function Bottomtabs() {
       }}
     >
       <Tab.Screen
-        name="Home"
+        name={NavigationStrings.home}
         component={Home}
         options={{
           tabBarIcon: ({ focused }) => {
@@ -49,7 +50,7 @@ export default function Bottomtabs() {
         }}
       />
       <Tab.Screen
-        name="search"
+        name={NavigationStrings.search}
         component={Search}
         options={{
           tabBarIcon: ({ focused }) => {
@@ -67,7 +68,7 @@ export default function Bottomtabs() {
         }}
       />
       <Tab.Screen
-        name="upload"
+        name={NavigationStrings.upload}
         component={Upload}
         options={{
           tabBarStyle: { display: "none" },
@@ -86,7 +87,7 @@ export default function Bottomtabs() {
         }}
       />
       <Tab.Screen
-        name="notifications"
+        name={NavigationStrings.notifications}
         component={Notifications}
         options={{
           tabBarIcon: ({ focused }) => {
@@ -104,7 +105,7 @@ export default function Bottomtabs() {
         }}
       />
       <Tab.Screen
-        name="profile"
+        name={NavigationStrings.profile}
         component={Profile}
         options={{
           tabBarIcon: ({ focused }) => {
@@ -122,6 +123,6 @@ export default function Bottomtabs() {
         }}
       />
     </Tab.Navigator>
-    
+
   );
 }

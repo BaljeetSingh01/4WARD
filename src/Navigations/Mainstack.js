@@ -4,15 +4,16 @@ import { Changepassword } from "../Screens/Changepassword/Changepassword";
 import { Editprofile } from "../Screens/Editprofile/Editprofile";
 import { Firstbanner } from "../Screens/Firstbanner/Firstbanner";
 import Bottomtabs from "./Bottomtabs";
+import NavigationStrings from "../Constants/navigationStrings";
 
-const Stack=createNativeStackNavigator()
+const Stack = createNativeStackNavigator()
 export const Mainstack = () => {
   return (
-     <>
-        <Stack.Screen name="Bottomtabs" component={Bottomtabs} />
-        <Stack.Screen name="Firstbanner" component={Firstbanner} />
-        <Stack.Screen name="Editprofile" component={Editprofile} />
-        <Stack.Screen name="Changepassword" component={Changepassword} />
-        </>
+    <>
+      <Stack.Screen name={NavigationStrings.bottomtabs} component={Bottomtabs} />
+      <Stack.Screen name={NavigationStrings.firstbanner} component={Firstbanner} />
+      <Stack.Screen name={NavigationStrings.editprofile} component={Editprofile} />
+      <Stack.Screen name={NavigationStrings.changepassword} component={Changepassword} />
+    </>
   );
 };

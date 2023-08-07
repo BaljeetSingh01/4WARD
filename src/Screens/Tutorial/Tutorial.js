@@ -6,7 +6,7 @@ import {
 } from "react-native-size-matters";
 import { Card } from "../../Components/Card";
 import Strings from "../../Constants/Strings";
-import NavigationStrings from "../../Constants/NavigationStrings";
+import NavigationStrings from "../../Constants/navigationStrings";
 import WrapperContainer from "../../Components/WrapperContainer";
 
 
@@ -25,7 +25,7 @@ export const Tutorial = ({ navigation }) => {
             <Card />
           </ScrollView>
         </View>
-        <TouchableOpacity onPress={() => navigation.navigate(NavigationStrings.Login)}>
+        <TouchableOpacity onPress={() => navigation.navigate(NavigationStrings.login)}>
           <Text style={styles.getstarted}>{Strings.get_started}</Text>
         </TouchableOpacity>
       </View>

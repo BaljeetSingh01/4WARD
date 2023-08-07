@@ -5,6 +5,7 @@ import { useState } from "react";
 import { useSelector } from "react-redux";
 import { Authstack } from "./Authstack";
 import { Mainstack } from "./Mainstack";
+import NavigationStrings from "../Constants/navigationStrings";
 
 export const Routes = () => {
     //       const [status,setStatus]=useState(false)
@@ -22,8 +23,8 @@ export const Routes = () => {
     console.log('in routes', thestatus)
     const Stack = createNativeStackNavigator()
     return (
-        <NavigationContainer>
-            <Stack.Navigator screenOptions={{ headerShown: false }}>
+        <NavigationContainer >
+            <Stack.Navigator screenOptions={{ headerShown: false, }}>
                 {thestatus ? Mainstack() : Authstack()}
             </Stack.Navigator>
         </NavigationContainer>

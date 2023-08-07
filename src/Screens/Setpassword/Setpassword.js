@@ -14,7 +14,7 @@ import {
 import { Inputfield } from "../../Components/Inputfield";
 import { RedButton } from "../../Components/RedButton";
 import imagePath from "../../Constants/imagePath";
-import NavigationStrings from "../../Constants/NavigationStrings";
+import NavigationStrings from "../../Constants/navigationStrings";
 import Strings from "../../Constants/Strings";
 import { styles } from "./Setpasswordstyle";
 export const Setpassword = ({ navigation }) => {

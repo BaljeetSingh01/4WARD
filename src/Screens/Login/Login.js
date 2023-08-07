@@ -5,7 +5,7 @@ import {
 } from "react-native-size-matters";
 import { RedButton } from "../../Components/RedButton";
 import imagePath from "../../Constants/imagePath";
-import NavigationStrings from "../../Constants/NavigationStrings";
+import NavigationStrings from "../../Constants/navigationStrings";
 import Strings from "../../Constants/Strings";
 import { styles } from "./Loginstyle";
 import WrapperContainer from "../../Components/WrapperContainer";

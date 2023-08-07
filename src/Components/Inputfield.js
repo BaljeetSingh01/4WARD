@@ -19,6 +19,7 @@ export const Inputfield = ({
   mylength,
   myref,
   onPress,
+  textinputstyle,
   ...props
 }) => {
   return (
@@ -30,7 +31,7 @@ export const Inputfield = ({
         value={myvalue}
         onChangeText={ontextinput}
         placeholder={placeholder}
-        style={styles.txtinput}
+        style={{ ...styles.txtinput, ...textinputstyle }}
         placeholderTextColor=' "rgba(255,255,255,0.5)"'
         {...props}
       />
@@ -50,9 +51,11 @@ const styles = StyleSheet.create({
     height: moderateVerticalScale(48),
     borderRadius: moderateScale(8),
     flexDirection: "row",
-    padding: moderateScale(16),
+    paddingHorizontal: moderateScale(16),
+
+
     alignItems: "center",
 
   },
-  txtinput: { flex: 1, fontWeight: 'bold', fontSize: 15, color: '#FFFFFF', marginLeft: 5 },
+  txtinput: { flex: 1, fontWeight: 'bold', fontSize: 15, color: '#FFFFFF', marginLeft: 5, paddingVertical: moderateVerticalScale(12) },
 });

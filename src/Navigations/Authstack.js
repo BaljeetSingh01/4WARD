@@ -11,20 +11,21 @@ import { Selectlocation } from "../Screens/Selectlocation/Selectlocation";
 import { Setpassword } from "../Screens/Setpassword/Setpassword";
 import { Tutorial } from "../Screens/Tutorial/Tutorial";
 import Bottomtabs from "./Bottomtabs";
+import NavigationStrings from "../Constants/navigationStrings";
 
 const Stack = createNativeStackNavigator();
 
 export const Authstack = () => {
   return (
 
-    <>
-      <Stack.Screen name="Tutorial" component={Tutorial} />
-      <Stack.Screen name="Login" component={Login} />
-      <Stack.Screen name="PhoneLogin" component={PhoneLogin} />
-      <Stack.Screen name="CreateAccount" component={CreateAccount} />
-      <Stack.Screen name="Otpscreen" component={Otpscreen} />
-      <Stack.Screen name="Setpassword" component={Setpassword} />
-      <Stack.Screen name="Selectlocation" component={Selectlocation} />
+    < >
+      <Stack.Screen name={NavigationStrings.tutorial} component={Tutorial} />
+      <Stack.Screen name={NavigationStrings.login} component={Login} />
+      <Stack.Screen name={NavigationStrings.phonelogin} component={PhoneLogin} />
+      <Stack.Screen name={NavigationStrings.createaccount} component={CreateAccount} />
+      <Stack.Screen name={NavigationStrings.otpscreen} component={Otpscreen} />
+      <Stack.Screen name={NavigationStrings.setpassword} component={Setpassword} />
+      <Stack.Screen name={NavigationStrings.selectlocation} component={Selectlocation} />
     </>
 
   );

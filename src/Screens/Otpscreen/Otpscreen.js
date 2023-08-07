@@ -14,18 +14,18 @@ import {
 import { Inputfield } from "../../Components/Inputfield";
 import { RedButton } from "../../Components/RedButton";
 import imagePath from "../../Constants/imagePath";
-import NavigationStrings from "../../Constants/NavigationStrings";
+import NavigationStrings from "../../Constants/navigationStrings";
 import Strings from "../../Constants/Strings";
 import { styles } from "./Otpscreenstyle";
 
 export const Otpscreen = ({ navigation }) => {
 
-  const otp1=useRef()
-  const otp2=useRef()
-  const otp3=useRef()
-  const otp4=useRef()
+  const otp1 = useRef()
+  const otp2 = useRef()
+  const otp3 = useRef()
+  const otp4 = useRef()
 
-  
+
   return (
     <View style={styles.container}>
       <View style={styles.upperview}>
@@ -44,69 +44,75 @@ export const Otpscreen = ({ navigation }) => {
         <View style={styles.fourinputview}>
           <View style={styles.firstinput}>
             <Inputfield
-             myref={otp1}
-             keyboardType={'number-pad'}
+              myref={otp1}
+              keyboardType={'number-pad'}
               autoFocus={true}
               btnstyle={styles.inputbtnstyle}
               //  myvalue={first}
               ontextinput={val => {
-                if(val.length >= 1){
+                if (val.length >= 1) {
                   otp2.current.focus();
                 }
               }}
               mylength={1}
+
+
+
             />
           </View>
           <View style={styles.secondinput}>
             <Inputfield
-             myref={otp2}
-            keyboardType={'number-pad'}
+              myref={otp2}
+              keyboardType={'number-pad'}
               btnstyle={styles.inputbtnstyle}
               // myvalue={second}
               // ontextinput={secondno}
               mylength={1}
               ontextinput={val => {
-                if(val.length >= 1){
+                if (val.length >= 1) {
                   otp3.current.focus();
                 }
-                else if(val.length<1){
+                else if (val.length < 1) {
                   otp1.current.focus()
                 }
               }}
+
             />
           </View>
           <View style={styles.thirdinput}>
             <Inputfield
-             myref={otp3}
-            keyboardType={'number-pad'}
+              myref={otp3}
+              keyboardType={'number-pad'}
               btnstyle={styles.inputbtnstyle}
               // myvalue={third}
               // ontextinput={thirdno}
               mylength={1}
               ontextinput={val => {
-                if(val.length >= 1){
+                if (val.length >= 1) {
                   otp4.current.focus();
                 }
-                else if(val.length < 1){
+                else if (val.length < 1) {
                   otp2.current.focus();
                 }
               }}
+
             />
           </View>
           <View style={styles.fourthinput}>
             <Inputfield
-             myref={otp4}
-            keyboardType={'number-pad'}
+              myref={otp4}
+              keyboardType={'number-pad'}
               btnstyle={styles.inputbtnstyle}
               // myvalue={four}
               // ontextinput={fourno}
               mylength={1}
-              ontextinput={val=>{
-                if(val<1){
+              ontextinput={val => {
+                if (val < 1) {
                   otp3.current.focus()
                 }
               }}
-              
+
+
             />
           </View>
         </View>
