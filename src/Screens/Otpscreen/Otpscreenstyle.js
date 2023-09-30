@@ -10,7 +10,7 @@ export const styles = StyleSheet.create({
     backgroundColor: "#2E2E2E",
     paddingHorizontal: moderateScale(24),
   },
-  upperview: { flex: 0.8 },
+  upperview: { flex: 0.9 },
   backarrowview: {
 
     width: moderateScale(20),
@@ -34,7 +34,7 @@ export const styles = StyleSheet.create({
   fourthinput: { flex: 0.13 },
   inputbtnstyle: { paddingHorizontal: moderateScale(5) },
 
-  resendcodeview: { flex: 0.1, justifyContent: "center" },
+  resendcodeview: { flex: 0.2, },
   resendtxt: { color: "#FFFFFF" },
 
   lastbtnview: { flex: 0.1 },

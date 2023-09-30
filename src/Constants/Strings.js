@@ -1,7 +1,8 @@
 export default {
   get_started: "Get Started",
   By_clicking_log_in:
-    "By clicking “Log In”, you agree with our Terms. Learn how we process your data in our Privacy policy.",
+    "By clicking “Log In”, you agree with our ",
+  Learn_how: 'Learn how we process our data in our ',
   or: "or",
   login_ph_no: "Login with phone number",
   login_google: "Login with Google",
@@ -32,7 +33,7 @@ export default {
   confirm_password: "Confirm password",
   enter_otp: "Enter the 4-digit code sent to you at 875 364 8947",
   edit_mobile_no: "Edit my mobile number",
-  resend_code: "Resend code in 0:14",
+  resend_code: "Resend code ",
   sector55: "Sector 55,Chandigarh",
   sector22: "Sector 22,Chandigarh",
   sector48: "Sector 48,Chandigarh",
@@ -65,5 +66,5 @@ export default {
   no: "966 559 659 5695",
   addinfo: "Add info",
   post: "POST",
-  show:'Show'
+  show: 'Show'
 };

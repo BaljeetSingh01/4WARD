@@ -38,7 +38,7 @@ export const Firstbanner = ({ route, navigation }) => {
         <Text style={styles.destxt1}>{data.description}</Text>
         <Text style={styles.destxt2}>{data.time}</Text>
       </View>
-      <TouchableOpacity style={styles.bottomview} onPress={()=>open({ latitude: 37.865101, longitude: -119.538330 })}>
+      <TouchableOpacity style={styles.bottomview} onPress={() => open({ latitude: 37.865101, longitude: -119.538330 })}>
         <RedButton title={Strings.viewmap} />
       </TouchableOpacity>
     </ImageBackground>

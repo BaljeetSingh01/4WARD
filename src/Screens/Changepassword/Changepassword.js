@@ -35,7 +35,7 @@ export const Changepassword = ({ navigation }) => {
       </View>
       <TouchableOpacity
         onPress={() => {
-          
+
         }}
         style={styles.lastbtnview}
       >

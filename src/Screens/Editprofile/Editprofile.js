@@ -8,7 +8,7 @@ import Strings from "../../Constants/Strings";
 import { styles } from "./Editprofilestyle";
 
 export const Editprofile = ({ navigation }) => {
-  
+
   const [firstname, setfirstname] = useState("");
   const [lastname, setlastname] = useState("");
   const [email, setemail] = useState("");
@@ -30,9 +30,9 @@ export const Editprofile = ({ navigation }) => {
   }
 
   function save() {
-    if (firstname=='' || !lastname || !email || !mobileno) {
+    if (firstname == '' || !lastname || !email || !mobileno) {
       alert("Please enter details properly");
-    } 
+    }
   }
 
 
@@ -52,14 +52,14 @@ export const Editprofile = ({ navigation }) => {
           <Text style={styles.txt}>{Strings.editprofile}</Text>
         </View>
         <View style={styles.imgview}>
-          <Image source={imagePath.editprofile} style={styles.img} 
-          
+          <Image source={imagePath.editprofile} style={styles.img}
+
           />
         </View>
 
         <View style={styles.twoinputfieldview}>
           <View style={styles.firstfield}>
-            <Inputfield placeholder={Strings.firstname} value={firstname} ontextinput={firstinput}/>
+            <Inputfield placeholder={Strings.firstname} value={firstname} ontextinput={firstinput} />
           </View>
           <View style={styles.secondfield}>
             <Inputfield placeholder={Strings.lastname} value={lastname} ontextinput={lastinput} />
@@ -76,8 +76,8 @@ export const Editprofile = ({ navigation }) => {
           </View>
         </View>
       </View>
-      <TouchableOpacity onPress={()=>save()}
-        
+      <TouchableOpacity onPress={() => save()}
+
         style={styles.lastbtnview}
       >
         <RedButton title={Strings.savechanges} />

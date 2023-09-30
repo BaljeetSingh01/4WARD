@@ -8,6 +8,8 @@ import { axiosllget, axiospost, postApi } from "./src/utils/utils";
 import { Post_url, get_data } from "./src/config/url";
 import { useEffect } from "react";
 import Practise from "./src/Screens/practise";
+import { retrieveData } from "./src/utils/helperfunction";
+import { changeTheme } from "./src/Redux/actions/settings";
 export default function App() {
   // useEffect(() => {
   //   let data = {
@@ -34,12 +36,33 @@ export default function App() {
 
   async function datasave() {
     const val = await AsyncStorage.getItem(('userLoginData'))
+
     console.log('in app.js', val)
     if (val) {
       statuscheck(true)
     }
   }
   datasave()
+
+
+  //---------for th
+  // const Theme = () => {
+  //   const val = retrieveData('theme')
+  //   console.log(val, 'fgtrgrtg');
+  //   if (val == true) {
+  //     changeTheme(true)
+  //   }
+  //   else {
+  //     changeTheme(false)
+  //   }
+  // }
+  // Theme()
+
+
+
+
+
+
   return (
     <Provider store={store}>
       <Routes />

@@ -12,6 +12,7 @@ import { Setpassword } from "../Screens/Setpassword/Setpassword";
 import { Tutorial } from "../Screens/Tutorial/Tutorial";
 import Bottomtabs from "./Bottomtabs";
 import NavigationStrings from "../Constants/navigationStrings";
+import Webview from "../Screens/Webview/Webview";
 
 const Stack = createNativeStackNavigator();
 
@@ -26,6 +27,8 @@ export const Authstack = () => {
       <Stack.Screen name={NavigationStrings.otpscreen} component={Otpscreen} />
       <Stack.Screen name={NavigationStrings.setpassword} component={Setpassword} />
       <Stack.Screen name={NavigationStrings.selectlocation} component={Selectlocation} />
+      <Stack.Screen name={NavigationStrings.Webview} component={Webview} />
+
     </>
 
   );

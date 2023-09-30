@@ -17,14 +17,33 @@ import imagePath from "../../Constants/imagePath";
 import NavigationStrings from "../../Constants/navigationStrings";
 import Strings from "../../Constants/Strings";
 import { styles } from "./Otpscreenstyle";
+import OTPTextView from "react-native-otp-textinput";
+import { useEffect } from "react";
 
 export const Otpscreen = ({ navigation }) => {
+  const [timer, settimer] = useState(10);
+  useEffect(() => {
+    const timeout = setTimeout(() => {
+      if (timer > 0) settimer(timer - 1)
+    }, 1000);
+    // return () => {
+    //   if (timeout) {
+    //     clearTimeout(timeout)
+    //   }
+    // }
+  }, [timer])
+  const onresend = () => {
+    settimer(10)
+  };
+  // const otp1 = useRef()
+  // const otp2 = useRef()
+  // const otp3 = useRef()
+  // const otp4 = useRef()
+  const input = useRef('')
+  const [otpinput, setotpinput] = useState('')
+  const handleCellTextChange = (text, i) => {
 
-  const otp1 = useRef()
-  const otp2 = useRef()
-  const otp3 = useRef()
-  const otp4 = useRef()
-
+  }
 
   return (
     <View style={styles.container}>
@@ -41,7 +60,7 @@ export const Otpscreen = ({ navigation }) => {
           <Text style={styles.enterotp}>{Strings.enter_otp}</Text>
           <Text style={styles.description}>{Strings.edit_mobile_no}</Text>
         </View>
-        <View style={styles.fourinputview}>
+        {/* <View style={styles.fourinputview}>
           <View style={styles.firstinput}>
             <Inputfield
               myref={otp1}
@@ -115,17 +134,34 @@ export const Otpscreen = ({ navigation }) => {
 
             />
           </View>
-        </View>
+        </View> */}
+        <OTPTextView
+          ref={input}
+          containerStyle={{ marginTop: 20 }}
+          textInputStyle={{ backgroundColor: 'grey', borderRadius: 8, borderBottomWidth: 0, color: 'black' }}
+          handleTextChange={setotpinput}
+          handleCellTextChange={handleCellTextChange}
+          inputCount={4}
+          autoFocus
+          keyboardType="numeric"
+          tintColor={'white'}
+
+        />
       </View>
       <View style={styles.resendcodeview}>
-        <Text style={styles.resendtxt}>{Strings.resend_code}</Text>
+        {timer > 0 ? <View style={{ flexDirection: 'row', marginBottom: 8 }}>
+          <Text style={styles.resendtxt}>{Strings.resend_code}</Text>
+          <Text style={{ marginLeft: 6, color: 'white' }}>{timer}</Text>
+        </View> :
+          <Text onPress={onresend}
+            style={{ ...styles.resendtxt, marginBottom: 8 }}>{Strings.resend_code}</Text>}
+        <TouchableOpacity
+          onPress={() => navigation.navigate(NavigationStrings.setpassword)}
+        >
+          <RedButton title={Strings.verify} />
+        </TouchableOpacity>
       </View>
-      <TouchableOpacity
-        onPress={() => navigation.navigate(NavigationStrings.setpassword)}
-        style={styles.lastbtnview}
-      >
-        <RedButton title={Strings.verify} />
-      </TouchableOpacity>
+
     </View>
   );
 };

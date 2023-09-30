@@ -29,4 +29,6 @@ export default {
   upload: require("../assets/images/ic_add.png"),
   notifications: require("../assets/images/ic_notify.png"),
   profile: require("../assets/images/ic_user.png"),
+  unchecked: require("../assets/images/unchecked.png"),
+  checkbox: require("../assets/images/checkbox.png")
 };

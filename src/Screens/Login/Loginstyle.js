@@ -13,7 +13,7 @@ export const styles = StyleSheet.create({
     width: moderateScale(121),
     height: moderateVerticalScale(178),
     alignSelf: "center",
-    marginTop: moderateVerticalScale(120),
+    marginTop: moderateVerticalScale(80),
   },
   text: {
     color: "#9C9C9C",
@@ -31,7 +31,7 @@ export const styles = StyleSheet.create({
   },
   socialcontainer: { gap: 16 },
 
-  redbtnstyle: { backgroundColor: "#FFFFFF" },
+  // redbtnstyle: { backgroundColor: "#FFFFFF" },
   redbtntxt: { color: "#17171A" },
 
   bottomcontainer: {

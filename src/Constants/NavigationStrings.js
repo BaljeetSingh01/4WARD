@@ -10,6 +10,7 @@ export default {
     firstbanner: 'Firstbanner',
     editprofile: 'Editprofile',
     changepassword: 'Changepassword',
+    Webview: 'Webview',
     //bottomtabs
     home: 'Home',
     search: 'Search',
